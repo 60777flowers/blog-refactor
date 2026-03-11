@@ -3,17 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
-author: John Doe
-language: en
-timezone: ''
+title: 欢迎来到kssss的博客
+subtitle: 记录生活,分享美好
+description: 个人博客,分享技术、影视、生活等 | 南京大学在读
+keywords: 博客,技术,生活,分享,南京大学,kssss
+author: kssss
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://60777flowers.github.io
+url: https://60777flowers.github.io/blog-refactor
 permalink: :year/:month/:day/:title/
 permalink_defaults:
 pretty_urls:
@@ -102,9 +102,9 @@ theme: butterfly
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
-  type: 'git'
-  repo: git@github.com:60777flowers/60777flowers.github.io.git
-  branch: main
+  type: git
+  repo: https://60777flowers:Qazxswedc%4012321@github.com/60777flowers/blog-refactor.git
+  branch: gh-pages
 jsonContent:
     meta: false
     pages: false

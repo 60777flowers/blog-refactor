@@ -15,13 +15,14 @@ default_top_img: /img/default.jpg
 
 # 头像
 avatar:
-  img: /img/avatar.png
-  effect: false
+  img: /img/avatar.jpg
+  effect: true
 
 # 社交图标
 social:
   fab fa-github: https://github.com/60777flowers || Github || "#4a7dbe"
-  fas fa-envelope: mailto:your-email@example.com || Email || "#4a7dbe"
+  fas fa-envelope: mailto:kaisheng-yang@smail.nju.edu.cn || Email || "#4a7dbe"
+  fab fa-snowflake: https://xueqiu.com/u/1467248089 || 雪球 || "#00bfff"
 
 # 文章元数据
 post_meta:
@@ -104,10 +105,14 @@ aside:
         icon: fa fa-heart
         text: 关注博主
         link: /
-    card_announcement:
-      enable: true
-      content: 欢迎来到我的博客!
-    card_recent_post:
+
+# 公告
+card_announcement:
+  enable: true
+  content: 欢迎来到kssss的博客!这里记录了我的学习和生活分享。
+
+# 最新文章
+card_recent_post:
       enable: true
       limit: 5
       sort: date
