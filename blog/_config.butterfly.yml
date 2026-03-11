@@ -100,7 +100,7 @@ aside:
     category: true
     card_author:
       enable: true
-      description:
+      description: 南京大学在读 | 热爱技术、影视与投资 | 记录生活,分享思考
       button:
         icon: fa fa-heart
         text: 关注博主
@@ -109,37 +109,37 @@ aside:
 # 公告
 card_announcement:
   enable: true
-  content: 欢迎来到kssss的博客!这里记录了我的学习和生活分享。
+  content: 欢迎来到kssss的博客!这里记录了我的学习、思考和生活中的点滴。
 
 # 最新文章
 card_recent_post:
-      enable: true
-      limit: 5
-      sort: date
-      show_icon: true
-  card_categories:
-    enable: true
-    limit: 8
-    expand: none
-    sort_order:
-  card_tags:
-    enable: true
-    limit: 10
-    color: false
-    sort_order:
-  card_archives:
-    enable: true
-    type: monthly
-    format: YYYY年MM月
-    order: -1
-    limit: 8
-  card_webinfo:
-    enable: true
-    post_count: true
-    article_count: true
-    runtime: true
-    last_push_date: true
-    sort_order: # 排序方式: -1 正序 1 倒序
+  enable: true
+  limit: 5
+  sort: date
+  show_icon: true
+card_categories:
+  enable: true
+  limit: 8
+  expand: none
+  sort_order:
+card_tags:
+  enable: true
+  limit: 10
+  color: false
+  sort_order:
+card_archives:
+  enable: true
+  type: monthly
+  format: YYYY年MM月
+  order: -1
+  limit: 8
+card_webinfo:
+  enable: true
+  post_count: true
+  article_count: true
+  runtime: true
+  last_push_date: true
+  sort_order:
 
 # 页脚设置
 footer:
