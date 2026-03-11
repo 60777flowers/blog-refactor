@@ -1,0 +1,158 @@
+# Butterfly 主题配置文件
+# Butterfly 主题配置 - 复制自主题目录下的 _config.yml
+
+# 导航菜单
+menu:
+  首页: / || fas fa-home
+  文章: /archives/ || fas fa-archive
+  分类: /categories/ || fas fa-folder-open
+  标签: /tags/ || fas fa-tags
+  关于: /about/ || fas fa-heart
+
+# 顶部图片
+index_img: /img/index.jpg
+default_top_img: /img/default.jpg
+
+# 头像
+avatar:
+  img: /img/avatar.png
+  effect: false
+
+# 社交图标
+social:
+  fab fa-github: https://github.com/60777flowers || Github || "#4a7dbe"
+  fas fa-envelope: mailto:your-email@example.com || Email || "#4a7dbe"
+
+# 文章元数据
+post_meta:
+  page:
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+  post:
+    date_type: both
+    date_format: relative
+    categories: true
+    tags: true
+    label: true
+
+# 代码块
+highlight_theme: mac light
+highlight_copy: true
+highlight_lang: true
+highlight_shrink: false
+code_height_limit: 350
+
+# 搜索
+local_search:
+  enable: true
+  preload: false
+
+# 评论
+comments:
+  use: false
+  text: true
+  lazyload: true
+  count: true
+  card_post_count: true
+
+# 统计字数
+wordcount:
+  enable: true
+
+# 阅读时间
+readtime:
+  enable: true
+
+# 版权声明
+post_copyright:
+  enable: true
+  decode: false
+  author_href: https://github.com/60777flowers
+
+# 打赏
+reward:
+  enable: false
+
+# 分享
+sharejs:
+  enable: false
+
+# 相关文章
+related_post:
+  enable: true
+  limit: 6
+  date_type: created
+
+# 侧边栏
+aside:
+  enable: true
+  hide: false
+  button: true
+  mobile: true
+  position: right
+  display:
+    archive: true
+    tag: true
+    category: true
+    card_author:
+      enable: true
+      description:
+      button:
+        icon: fa fa-heart
+        text: 关注博主
+        link: /
+    card_announcement:
+      enable: true
+      content: 欢迎来到我的博客!
+    card_recent_post:
+      enable: true
+      limit: 5
+      sort: date
+      show_icon: true
+  card_categories:
+    enable: true
+    limit: 8
+    expand: none
+    sort_order:
+  card_tags:
+    enable: true
+    limit: 10
+    color: false
+    sort_order:
+  card_archives:
+    enable: true
+    type: monthly
+    format: YYYY年MM月
+    order: -1
+    limit: 8
+  card_webinfo:
+    enable: true
+    post_count: true
+    article_count: true
+    runtime: true
+    last_push_date: true
+    sort_order: # 排序方式: -1 正序 1 倒序
+
+# 页脚设置
+footer:
+  owner:
+    enable: true
+    since: 2022
+  custom_text:
+  copyright: true # Copyright of theme and framework
+  ICP: # ICP 备案号
+  ICP_icon: # ICP 图标
+  theme:
+    enable: true
+    version: true
+  powered:
+    enable: true
+    version: true
+  count:
+    enable: true
+    site_uv: true
+    site_pv: true
+    post_pv: true
