@@ -1,22 +1,23 @@
-name: Hexo Deploy to GitHub Pages
+name: Build and Deploy
 
 on:
   push:
     branches: [ main ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Checkout repository
-      uses: actions/checkout@v3
-      with:
-        submodules: recursive
+    - name: Checkout
+      uses: actions/checkout@v4
 
     - name: Setup Node.js
-      uses: actions/setup-node@v3
+      uses: actions/setup-node@v4
       with:
         node-version: '18'
 
@@ -25,22 +26,21 @@ jobs:
         cd blog
         npm install
 
-    - name: Clone Butterfly theme
+    - name: Clone theme
       run: |
         cd blog/themes
-        if [ ! -d "butterfly" ]; then
-          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git butterfly --depth 1
-        fi
+        rm -rf butterfly
+        git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git butterfly --depth 1
 
-    - name: Generate static files
+    - name: Generate
       run: |
         cd blog
         npx hexo clean
         npx hexo generate
 
-    - name: Deploy to GitHub Pages
+    - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./blog/public
-        cname: ''  # 如果有自定义域名,在这里填写
+        force_orphan: true
