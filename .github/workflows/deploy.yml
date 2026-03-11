@@ -1,0 +1,46 @@
+name: Hexo Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+      with:
+        submodules: recursive
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+
+    - name: Install dependencies
+      run: |
+        cd blog
+        npm install
+
+    - name: Clone Butterfly theme
+      run: |
+        cd blog/themes
+        if [ ! -d "butterfly" ]; then
+          git clone -b master https://github.com/jerryc127/hexo-theme-butterfly.git butterfly --depth 1
+        fi
+
+    - name: Generate static files
+      run: |
+        cd blog
+        npx hexo clean
+        npx hexo generate
+
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./blog/public
+        cname: ''  # 如果有自定义域名,在这里填写
